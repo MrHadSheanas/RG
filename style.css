@@ -1,0 +1,236 @@
+*{
+	/* Vite-like palette */
+	--vite-purple:#0077B6;
+	--vite-color-line:#0096c7;
+    padding: 0;margin: 0;
+	
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: 100vh;
+    background-color:#032a3730;
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.368);
+}
+
+#main-div{
+    width: 750px;
+    height: 64vh;
+    display:flex;
+    position: relative;
+
+
+}
+.Welcome{
+ position: absolute;
+ right: 0;
+ width: 55%;
+ height: 64vh;
+ border-radius: 10px;
+ text-align: center;
+background-color: #0076b6;
+border-top-left-radius:35%;
+border-bottom-left-radius: 35%;
+position: relative;
+z-index: 1000;
+transition: all 1.2s;
+
+
+
+
+
+}
+.going{
+   
+    border-radius: 0;
+    border-top-right-radius: 35%;
+    border-bottom-right-radius: 35%;
+
+    
+}
+.Second-div{
+    display: none;
+}
+.coming{
+    display: none;
+}
+.notshow{
+    display: none;
+
+}
+.showing{
+    display: block;
+}
+
+.show{
+    display: block;
+    transform: translateX(400px);
+    transition: all 1.4s ease-in-out;
+}
+@keyframes moving{
+    0%{
+      transform: translateX(-10px); 
+      left: 300px; 
+    }
+    100%{
+    position: absolute;
+    left: 0;
+    }
+}
+.Welcome h1{
+    font-size: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.862);
+    position: relative;
+    top: 130px;
+    
+}
+.Welcome p{
+    color: rgba(255, 255, 255, 0.779);
+    position: relative;
+    top: 145px;
+}
+.Welcome button{
+    width: 100px;
+    height: 6vh;
+    border: 0.1px solid rgba(255, 255, 255, 0.563);
+    background-color:#0095c7bd;
+    position: relative;
+    top: 170px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 8px;
+    transition: all 0.4s;
+
+}
+.Welcome button:hover{
+    background-color: white;
+    color: #0096c7;
+    
+}
+#main-div #First-div{
+    width: 45%;
+    height: 64vh;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    transition: all 1.2s;
+}
+#main-div #First-div h1{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size:1.7rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#main-div #First-div input{
+    width: 80%;
+    height: 5vh;
+    background-color:rgba(0, 0, 0, 0.105);
+    border: none;
+    border-radius:8px;
+    padding: 5px;
+    padding-left:10px;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.587);
+
+
+}
+a{
+    text-decoration: none;
+    text-transform: none;
+    color:black;
+}
+
+#main-div #First-div #img-p,#main-div #First-div #img-e,#main-div #First-div #img-n{
+
+    position: relative;
+    left: -30px;
+    top: 5px;
+    size: 20px;
+    padding-top: 4px;
+
+}
+#main-div #First-div input:hover{
+    border: 0.1px solid rgba(0, 0, 0, 0.228);
+    background-color: white;
+    padding: 4px;
+    transform:translate(-5px);
+
+}
+
+#main-div #First-div button{
+    width: 85%;
+    height: 6vh;
+    background-color: var(--vite-purple);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.4s;
+
+}
+#main-div #First-div button:hover{
+    background-color: white;
+    color: #0077B6;
+}
+#main-div #First-div p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    left: -20px;
+}
+#First-div img{
+    width: 20px;
+    height: 20px;
+}
+#First-div .img-1{
+    width: 25px;
+    height:25px;
+    text-align: center;
+    margin: auto;
+    border: 0.1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 3px;
+    position: relative;
+    left:23%;
+    margin: 1px;
+    transition: 0.2s;
+}
+.img-1:hover{
+    transform: scale(1.1);
+}
+.Second-div input{
+    width: 95%;
+    height: 7vh;
+    padding: 12px;
+    margin-top: 25px;
+
+}
+.img-2{
+    width: 30px;
+    height: 30px;
+}
+.come-2{
+    display: none;
+}
+.btn-one:hover{
+    border:1px rgba(0, 0, 0, 0.801) solid;
+
+}
