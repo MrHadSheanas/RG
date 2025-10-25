@@ -24,8 +24,7 @@ section{
     height: 64vh;
     display:flex;
     position: relative;
-
-
+    overflow: hidden;
 }
 .Welcome{
  position: absolute;
@@ -34,23 +33,47 @@ section{
  height: 64vh;
  border-radius: 10px;
  text-align: center;
-background-color: #0076b6;
-border-top-left-radius:35%;
-border-bottom-left-radius: 35%;
-position: relative;
-z-index: 1000;
-transition: all 1.2s;
+ background-color: #0076b6;
+ position: relative;
+ z-index: 1000;
+ transition: all 1.2s;
 
-
-
-
-
+}
+.Welcome::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:50%;              /* large shape used for the curved slide */
+    height: 200%;
+    background-color: #0076b6;
+    transform: translateX(0); /* initial position */
+    z-index: -1;              /* behind the .Welcome content */
+    transition: transform 1.2s ease-in-out;
+}
+.Welcome::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250%;
+    height: 100%;
+    background-color: #0076b6;
+    /* start off-screen to the right so it can slide in when toggled */
+    transform: translateX(100%);
+    z-index: -2;
+    transition: transform 1.8s ease-in-out;
+}
+.Welcome.going::before{
+    transform: translateX(-60%); /* slide main overlay left */
+}
+.Welcome.going::after{
+    transform: translateX(0);    /* bring the second overlay into view */
 }
 .going{
    
     border-radius: 0;
-    border-top-right-radius: 35%;
-    border-bottom-right-radius: 35%;
+   
 
     
 }

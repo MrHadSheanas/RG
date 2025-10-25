@@ -2,6 +2,7 @@ let buttonone=document.getElementById("btn-1");
 let target=document.getElementById('come');
 let login=document.querySelector('.Second-div');
 let target2=document.querySelector('.coming');
+let welcome=document.querySelector('.Welcome');
 let clicking = false;
 
 if(buttonone){
@@ -13,7 +14,7 @@ if(buttonone){
 			login.classList.add('show');
 			document.getElementById('First-div').style.display = 'none';
 			document.getElementById('btn-1').textContent = 'Register';
-		
+			document.welcome.style.left='-200px';
 
         }
         else{
